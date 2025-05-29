@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
+import { Task } from '../task.model';
+import { TaskService } from '../tasks/task.service';
 
 @Component({
   selector: 'app-task-details',
@@ -10,10 +12,14 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
   styleUrl: './task-details.component.css'
 })
 export class TaskDetailsComponent {
-  taskId: string | null;
+  task: Task | undefined;
 
-  constructor(private route: ActivatedRoute) {
-    this.taskId = this.route.snapshot.paramMap.get('id');
+
+  constructor(private route: ActivatedRoute, private taskService: TaskService) {
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id) {
+      this.task = this.taskService.getTaskById(id);
+    }
   }
 
 }

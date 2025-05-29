@@ -1,0 +1,4 @@
+    <h2>Task Details</h2>
+    <p *ngIf="taskId">Task ID: {{ taskId }}</p>
+    <p *ngIf="!taskId">No Task ID provided.</p>
+    <a routerLink="/">Back to Task List</a>

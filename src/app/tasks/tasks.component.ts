@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { Task } from '../task.model';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-tasks',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.css'
 })

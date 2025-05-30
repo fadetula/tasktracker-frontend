@@ -13,10 +13,15 @@ import { TaskService } from './task.service';
 })
 export class TasksComponent {
   // Define an array of mock tasks
-  tasks: Task[];
+  tasks: Task[] = [];
 
   constructor(private taskService: TaskService) {
-    this.tasks = this.taskService.getTasks();
+  }
+
+  ngOnInit() {
+    this.taskService.getTasks().subscribe(data => {
+      this.tasks = data;
+    });
   }
 
 }

@@ -16,9 +16,14 @@ export class TaskDetailsComponent {
 
 
   constructor(private route: ActivatedRoute, private taskService: TaskService) {
+  }
+
+  ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
-      this.task = this.taskService.getTaskById(id);
+      this.taskService.getTaskById(id).subscribe(data => {
+        this.task = data;
+      });
     }
   }
 

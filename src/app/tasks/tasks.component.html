@@ -19,8 +19,9 @@
       <td>{{ task.dueDate }}</td>
       <td>{{ task.status }}</td>
       <td>
-        <a [routerLink]="['/tasks', 'edit', task.id]">Edit</a>&nbsp;&nbsp;
-        <a [routerLink]="['/tasks', task.id]">View Details</a>
+        <a [routerLink]="['/tasks', task.id]">View Details</a> |
+        <a [routerLink]="['/tasks', 'edit', task.id]">Edit</a> |
+        <button (click)="deleteTask(task.id)">Delete</button>
       </td>
     </tr>
   </tbody>

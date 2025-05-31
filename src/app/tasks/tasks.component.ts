@@ -24,4 +24,11 @@ export class TasksComponent {
     });
   }
 
+  deleteTask(id: string) {
+    this.taskService.deleteTask(id).subscribe(data => {
+      // Optionally, remove the task from the displayed list, or reload:
+      this.tasks = this.tasks.filter(task => task.id !== id);
+    });
+  }
+
 }

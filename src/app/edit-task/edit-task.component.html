@@ -1,0 +1,15 @@
+<h2>Edit Task</h2>
+<form *ngIf="task" (ngSubmit)="onSubmit()">
+  <label>Title: <input [(ngModel)]="task.title" name="title" required></label><br>
+  <label>Description: <input [(ngModel)]="task.description" name="description"></label><br>
+  <label>Due Date: <input [(ngModel)]="task.dueDate" name="dueDate" type="date"></label><br>
+  <label>Status: 
+    <select [(ngModel)]="task.status" name="status">
+      <option value="not started">Not Started</option>
+      <option value="in progress">In Progress</option>
+      <option value="completed">Completed</option>
+    </select>
+  </label><br>
+  <button type="submit">Save</button>
+</form>
+<a routerLink="/">Back to Task List</a>

@@ -19,6 +19,7 @@
       <td>{{ task.dueDate }}</td>
       <td>{{ task.status }}</td>
       <td>
+        <a [routerLink]="['/tasks', 'edit', task.id]">Edit</a>&nbsp;&nbsp;
         <a [routerLink]="['/tasks', task.id]">View Details</a>
       </td>
     </tr>

@@ -1,27 +1,46 @@
-# TasktrackerFrontend
+# Task Tracker – Full Stack Angular & Spring Boot Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.2.
+A modern, professional task management app with full CRUD functionality, built with:
+- **Angular 18** (Bootstrap 5 styling, standalone components, modern routing)
+- **Spring Boot** (Java 17, REST API)
+- **Responsive UI:** Clean, mobile-friendly, and brandable
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## ✨ Features
 
-## Code scaffolding
+- **Create, View, Update, and Delete Tasks**
+- **Beautiful, Modern UI** (Bootstrap + custom brand color)
+- **Live Data** – Integrated with a real Java Spring Boot backend (API)
+- **Easy Navigation** – Task list, details, create/edit forms
+- **Status Highlighting** (color-coded: Not Started, In Progress, Done)
+- **Fully Documented Code** – Clean, modular, and professional
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 🚀 Demo
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Live Demo:** _[optional: add link if deployed]_
+- **Screenshots:**  
+  ![Task List](path/to/task-list-screenshot.png)
+  ![Create Task](path/to/create-task-screenshot.png)
+  ![Edit Task](path/to/edit-task-screenshot.png)
+  ![Task Details](path/to/task-details-screenshot.png)
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🛠️ Tech Stack
 
-## Running end-to-end tests
+- **Frontend:** Angular 18, Bootstrap 5, TypeScript
+- **Backend:** Spring Boot, Java 17, REST API
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+## 📦 How to Run
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+**Frontend**
+```sh
+cd tasktracker-frontend
+npm install
+npm start
+# visit http://localhost:4200

@@ -1,18 +1,34 @@
 <div class="container mt-5">
-  <h2>Task Details</h2>
-  <div *ngIf="task" class="card mt-4">
-    <div class="card-body">
-      <h5 class="card-title mb-4">{{ task.title }}</h5>
-      <p class="card-text"><strong class="me-1">Description:</strong> {{ task.description }}</p>
-      <p class="card-text"><strong class="me-1">Due Date:</strong> {{ task.dueDate }}</p>
-      <p class="card-text">
-        <strong class="me-2">Status:</strong>
-        <span [class]="task.status | statusClass">
-          {{ task.status }}
-        </span>
-      </p>
-      <a routerLink="/" class="btn btn-outline-secondary mt-3">Back to Task List</a>
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <div class="card shadow">
+        <div class="card-body">
+          <h3 class="card-title mb-4">Task Details</h3>
+          <ul class="list-group mb-4">
+            <li class="list-group-item d-flex justify-content-between">
+              <span class="fw-bold">Title:</span>
+              <span>{{ task?.title }}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span class="fw-bold">Description:</span>
+              <span>{{ task?.description }}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span class="fw-bold">Due Date:</span>
+              <span>{{ task?.dueDate }}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span class="fw-bold">Status:</span>
+              <span>
+                <span [class]="task?.status | statusClass">
+                  {{ task?.status }}
+                </span>
+              </span>
+            </li>
+          </ul>
+          <a routerLink="/" class="btn btn-outline-secondary">Back to Task List</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-

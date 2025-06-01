@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class StatusClassPipe implements PipeTransform {
 
-  transform(status: string): string {
+  transform(status?: string): string {
     switch (status) {
       case 'not started':
         return 'badge rounded-pill bg-warning text-dark px-3 py-2';

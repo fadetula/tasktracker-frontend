@@ -1,24 +1,27 @@
-<h2>Create New Task</h2>
-<form (ngSubmit)="onSubmit()" #taskForm="ngForm">
-  <div>
-    <label>Title:</label>
-    <input name="title" [(ngModel)]="task.title" required />
-  </div>
-  <div>
-    <label>Description:</label>
-    <input name="description" [(ngModel)]="task.description" required />
-  </div>
-  <div>
-    <label>Due Date:</label>
-    <input type="date" name="dueDate" [(ngModel)]="task.dueDate" required />
-  </div>
-  <div>
-    <label>Status:</label>
-    <select name="status" [(ngModel)]="task.status" required>
-      <option value="not started">Not Started</option>
-      <option value="in progress">In Progress</option>
-      <option value="done">Done</option>
-    </select>
-  </div>
-  <button type="submit">Create Task</button>
-</form>
+<div class="container mt-5">
+  <h2>Create New Task</h2>
+  <form (ngSubmit)="onSubmit()" #taskForm="ngForm" class="mt-4">
+    <div class="mb-3">
+      <label for="title" class="form-label">Title:</label>
+      <input id="title" class="form-control" name="title" required [(ngModel)]="task.title">
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Description:</label>
+      <textarea id="description" class="form-control" name="description" rows="2" [(ngModel)]="task.description"></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="dueDate" class="form-label">Due Date:</label>
+      <input id="dueDate" type="date" class="form-control" name="dueDate" [(ngModel)]="task.dueDate">
+    </div>
+    <div class="mb-3">
+      <label for="status" class="form-label">Status:</label>
+      <select id="status" class="form-select" name="status" [(ngModel)]="task.status">
+        <option value="not started">Not Started</option>
+        <option value="in progress">In Progress</option>
+        <option value="completed">Completed</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary me-2">Create Task</button>
+    <a routerLink="/" class="btn btn-secondary">Cancel</a>
+  </form>
+</div>

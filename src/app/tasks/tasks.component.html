@@ -21,7 +21,7 @@
           <td>{{ task.description }}</td>
           <td>{{ task.dueDate }}</td>
           <td>
-            <span [class]="getStatusClass(task.status)">
+            <span [class]="task.status | statusClass">
               {{ task.status }}
             </span>
           </td>

@@ -1,11 +1,18 @@
-    <h2>Task Details</h2>
-    <div *ngIf="task; else notFound">
-        <p><strong>Title:</strong> {{ task.title }}</p>
-        <p><strong>Description:</strong> {{ task.description }}</p>
-        <p><strong>Due Date:</strong> {{ task.dueDate }}</p>
-        <p><strong>Status:</strong> {{ task.status }}</p>
+<div class="container mt-5">
+  <h2>Task Details</h2>
+  <div *ngIf="task" class="card mt-4">
+    <div class="card-body">
+      <h5 class="card-title mb-4">{{ task.title }}</h5>
+      <p class="card-text"><strong class="me-1">Description:</strong> {{ task.description }}</p>
+      <p class="card-text"><strong class="me-1">Due Date:</strong> {{ task.dueDate }}</p>
+      <p class="card-text">
+        <strong class="me-2">Status:</strong>
+        <span [class]="task.status | statusClass">
+          {{ task.status }}
+        </span>
+      </p>
+      <a routerLink="/" class="btn btn-outline-secondary mt-3">Back to Task List</a>
     </div>
-    <ng-template #notFound>
-        <p>Task not found.</p>
-    </ng-template>
-    <a routerLink="/">Back to Task List</a>
+  </div>
+</div>
+

@@ -20,8 +20,7 @@ A modern, professional task management app with full CRUD functionality, built w
 
 ## 🚀 Demo
 
-- **Live Demo:** _[optional: add link if deployed]_
-- **Screenshots:**  
+-- **Screenshots:**  
   ![Task List](path/to/task-list-screenshot.png)
   ![Create Task](path/to/create-task-screenshot.png)
   ![Edit Task](path/to/edit-task-screenshot.png)
@@ -53,19 +52,22 @@ cd tasktracker-backend
 # REST API runs at http://localhost:8080
 ```
 
+---
+
 ## 💡 Customization
 Branding: Change the brand color in src/styles.css (--brand-primary)
 
 Backend API: Adjust src/app/tasks/task.service.ts for your endpoint
 
+---
+
 ## 🙋‍♂️ About the Developer
 Hi, I'm Femi – a senior Java and full stack developer.
 If you’d like a custom project like this (or want this app customized for your business), let’s work together!
+
+---
 
 ## 📧 Contact & Fiverr
 Fiverr Profile: https://www.fiverr.com/femi_adetula
 
 Email: femi.adetula.services@gmail.com
-
-
-

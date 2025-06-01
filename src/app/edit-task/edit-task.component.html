@@ -1,28 +1,40 @@
+
 <div class="container mt-5">
-  <h2>Edit Task</h2>
-  <form *ngIf="task" (ngSubmit)="onSubmit()" #editForm="ngForm" class="mt-4">
-    <div class="mb-3">
-      <label for="title" class="form-label">Title:</label>
-      <input id="title" class="form-control" name="title" required [(ngModel)]="task.title">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <div class="card shadow">
+        <div class="card-body">
+          <h3 class="card-title mb-4">Edit Task</h3>
+          <form *ngIf="task" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input id="title" type="text" class="form-control" [(ngModel)]="task.title" name="title" required>
+            </div>
+            <div class="mb-3">
+              <label for="description" class="form-label">Description</label>
+              <textarea id="description" class="form-control" [(ngModel)]="task.description" name="description" rows="2"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="dueDate" class="form-label">Due Date</label>
+              <input id="dueDate" type="date" class="form-control" [(ngModel)]="task.dueDate" name="dueDate" required>
+            </div>
+            <div class="mb-4">
+              <label for="status" class="form-label">Status</label>
+              <select id="status" class="form-select" [(ngModel)]="task.status" name="status" required>
+                <option value="not started">Not Started</option>
+                <option value="in progress">In Progress</option>
+                <option value="done">Done</option>
+              </select>
+            </div>
+            <div class="d-flex justify-content-between">
+              <button type="submit" class="btn btn-success px-4">Save</button>
+              <a routerLink="/" class="btn btn-secondary">Cancel</a>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-    <div class="mb-3">
-      <label for="description" class="form-label">Description:</label>
-      <textarea id="description" class="form-control" name="description" rows="2" [(ngModel)]="task.description"></textarea>
-    </div>
-    <div class="mb-3">
-      <label for="dueDate" class="form-label">Due Date:</label>
-      <input id="dueDate" type="date" class="form-control" name="dueDate" [(ngModel)]="task.dueDate">
-    </div>
-    <div class="mb-3">
-      <label for="status" class="form-label">Status:</label>
-      <select id="status" class="form-select" name="status" [(ngModel)]="task.status">
-        <option value="not started">Not Started</option>
-        <option value="in progress">In Progress</option>
-        <option value="completed">Completed</option>
-      </select>
-    </div>
-    <button type="submit" class="btn btn-success me-2">Save</button>
-    <a routerLink="/" class="btn btn-secondary">Cancel</a>
-  </form>
+  </div>
 </div>
+
 

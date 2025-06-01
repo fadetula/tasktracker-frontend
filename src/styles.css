@@ -1,3 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
+:root {
+  --brand-primary: #2D9CDB;
+  --brand-border: rgba(45, 156, 219, 0.18);
+}
+
+body {
+  background-color: #f7fbfd;
+}
+
+.btn-primary,
+a.btn-primary {
+  background-color: var(--brand-primary) !important;
+  border-color: var(--brand-primary) !important;
+}
+.btn-primary:hover,
+a.btn-primary:hover {
+  background-color: #1b6ea8 !important;
+  border-color: #1b6ea8 !important;
+}
+
+.card-title {
+  color: var(--brand-primary);
+}
+.card {
+  box-shadow: 0 4px 16px rgba(45, 156, 219, 0.06);
+}
+
+/* Subtle brand border for table */
+.table,
+.table-bordered > :not(caption) > * > * {
+  border-color: var(--brand-border) !important;
+}
+
+/* Extra specificity for table borders */
+.table-bordered > tbody > tr > td,
+.table-bordered > thead > tr > th {
+  border-color: var(--brand-border) !important;
+}
+
+.brand-header {
+  color: var(--brand-primary) !important;
+  letter-spacing: 1px;
+  font-weight: 700;
+}

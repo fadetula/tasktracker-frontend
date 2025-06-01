@@ -20,7 +20,7 @@ A modern, professional task management app with full CRUD functionality, built w
 
 ## 🚀 Demo
 
--- **Screenshots:**  
+**Screenshots:**  
   ![Task List](screenshots/task-list-screenshot.png)
   ![Create Task](screenshots/create-task-screenshot.png)
   ![Edit Task](screenshots/edit-task-screenshot.png)
